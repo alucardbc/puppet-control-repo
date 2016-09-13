@@ -1,5 +1,5 @@
 #!/bin/bash
-HOST='facter hostname'
+HOST='hostname'
 
 case $HOST in
   dfw)
