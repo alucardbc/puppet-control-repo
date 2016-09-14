@@ -14,6 +14,7 @@ class profile::base {
   }
   
   include ntp_wrapper
+  include epel_wrapper
   
   package { 'vim':
     ensure => present,
