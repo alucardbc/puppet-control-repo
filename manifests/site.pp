@@ -26,6 +26,7 @@ File { backup => false }
 
 node 'dewey.puppetlabs.vm' {
   include users
+  include ntp_wrapper
 }
 
 node default {
