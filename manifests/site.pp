@@ -25,6 +25,7 @@ File { backup => false }
 # specified in the console for that node.
 
 node 'dewey.puppetlabs.vm' {
+  include profile::baseprofile
   include users
   include ntp_wrapper
 }
