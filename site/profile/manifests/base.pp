@@ -13,8 +13,11 @@ class profile::base {
     ensure => 'present',
   }
   
-  include ntp_wrapper
-  include epel_wrapper
+  class { '::ntp':
+    servers => ['0.pool.ntp.org','1.pool.ntp.org','2.pool.ntp.org']
+  }
+  
+  include epel
   
   package { 'vim':
     ensure => present,
