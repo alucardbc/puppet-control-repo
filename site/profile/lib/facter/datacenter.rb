@@ -1,6 +1,6 @@
 Facter.add('datacenter') do
   setcode do
-    homstname = Facter.value(:hostname)
+    hostname = Facter.value(:hostname)
     case hostname
     when /den/
       'denver'
