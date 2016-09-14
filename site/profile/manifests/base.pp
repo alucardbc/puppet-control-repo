@@ -1,4 +1,7 @@
 class profile::base {
+  include ::ntp
+  include ::epel
+  
   user { 'root':
     ensure           => 'present',
     comment          => 'root',
@@ -13,12 +16,6 @@ class profile::base {
     ensure     => 'present',
     managehome => true,
   }
-  
-  class { '::ntp':
-    servers => ['0.pool.ntp.org','1.pool.ntp.org','2.pool.ntp.org']
-  }
-  
-  include ::epel
   
   package { 'vim-enhanced':
     ensure => present,
