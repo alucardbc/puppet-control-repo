@@ -20,7 +20,7 @@ class profile::base {
   
   include ::epel
   
-  package { 'vim':
+  package { 'vim-enhanced':
     ensure => present,
   }
 }
