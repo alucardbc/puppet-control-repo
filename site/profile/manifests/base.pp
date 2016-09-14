@@ -10,7 +10,8 @@ class profile::base {
   }
   
   user { 'ddewey':
-    ensure => 'present',
+    ensure     => 'present',
+    managehome => true,
   }
   
   class { '::ntp':
