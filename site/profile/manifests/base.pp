@@ -18,7 +18,7 @@ class profile::base {
     servers => ['0.pool.ntp.org','1.pool.ntp.org','2.pool.ntp.org']
   }
   
-  include epel
+  include ::epel
   
   package { 'vim':
     ensure => present,
