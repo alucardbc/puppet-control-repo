@@ -25,7 +25,7 @@ File { backup => false }
 # specified in the console for that node.
 
 node 'dewey.puppetlabs.vm' {
-  include profile::base
+  include profile::blog
 }
 
 node default {
