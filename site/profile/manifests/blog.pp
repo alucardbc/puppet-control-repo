@@ -1,5 +1,7 @@
 class profile::blog {
-  class { 'apache': }
+  class { 'apache': 
+    default_vhost => false,
+  }
   
   apache::fastcgi::server { 'php':
     host       => '127.0.0.1:9000',
